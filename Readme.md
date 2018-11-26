@@ -2,7 +2,12 @@
 This is a demo project to test the Redis Cache functionallity of Micronaut framework.
 
 ## Redis cache configuration:
+Redis server is up in a docker container running locally
 ```
+docker run redis
+```
+application.yml:
+``` yml
 micronaut:
     application:
         name: cache-redis-demo
@@ -13,7 +18,7 @@ micronaut:
                 maximumSize: 20
 ```
 ### Using mycache
-```
+``` java
 @Controller("/cache")
 public class CacheController {
 
