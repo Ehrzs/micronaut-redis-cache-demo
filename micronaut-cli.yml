@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: cache.redis.demo
+---
+testFramework: junit
+sourceLanguage: java
