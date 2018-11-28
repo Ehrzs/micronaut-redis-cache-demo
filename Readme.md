@@ -11,26 +11,27 @@ application.yml:
 micronaut:
     application:
         name: cache-redis-demo
-    redis:
-        uri: redis://172.17.0.2:6379/12
-        caches:
-            mycache:
-                maximumSize: 20
+redis:
+    uri: redis://172.17.0.2:6379/12
+    caches:
+        mycache:
+            maximumSize: 20
 ```
 ### Using mycache
 ``` java
 @Controller("/cache")
+@CacheConfig("mycache")
 public class CacheController {
 
     @Get
-    @Cacheable("mycache")
+    @Cacheable
     public String cacheable() throws InterruptedException {
         Thread.sleep(1000);
         return "hello";
     }
 
     @Get("/invalidate")
-    @CacheInvalidate("mycache")
+    @CacheInvalidate
     public String cacheInvalidate() {
         return "ok";
     }
