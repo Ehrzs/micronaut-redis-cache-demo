@@ -6,3 +6,6 @@ redis:
     caches:
         mycache:
             maximumSize: 20
+        othercache:
+            maximumSize: 20
+

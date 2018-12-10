@@ -11,3 +11,7 @@ out/
 .project
 .settings
 .classpath
+bin/
+.vscocde/
+settings.json
+launch.json

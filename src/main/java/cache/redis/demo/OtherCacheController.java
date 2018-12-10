@@ -6,9 +6,9 @@ import io.micronaut.cache.annotation.Cacheable;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 
-@Controller("/cache")
-@CacheConfig("mycache")
-public class CacheController {
+@Controller("/othercache")
+@CacheConfig("othercache")
+public class OtherCacheController {
 
   @Get
   @Cacheable
